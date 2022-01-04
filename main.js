@@ -73,3 +73,19 @@ $("#like-list").click(function () {
         $(`.${mediaUnChecked}`).css("display", "none")
     }
 }
+
+{
+    $("#navbar-icon").click(function () {
+        $(".nav-ipad-container").css("transform", "translateX(0px)")
+        $(".nav-ipad-container").css("opacity", "1")
+        $(".nav-ipad-overlay").css("display", "block")
+        $(".nav-ipad-overlay").css("opacity", "1")
+    })
+
+    $(".nav-ipad-overlay").click(function () {
+        $(".nav-ipad-container").css("transform", "translateX(-100%)")
+        $(".nav-ipad-container").css("opacity", "0")
+        $(".nav-ipad-overlay").css("display", "none")
+        $(".nav-ipad-overlay").css("opacity", "0")
+    })
+}
