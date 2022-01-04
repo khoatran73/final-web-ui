@@ -572,13 +572,25 @@ a:hover {
     align-items: center;
 }
 
-.comment-area .comment-box input {
+.comment-area .comment-box .comment-form {
     width: 91%;
+    position: relative;
+}
+
+.comment-area .comment-box .comment-form input:first-child {
+    width: 100%;
     padding: 6px 16px;
     outline: none;
     border-radius: 30px;
     border: 1px solid #ccc;
     font-size: 15px;
+}
+
+.comment-area .comment-box .comment-form label {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 12px);
+    cursor: pointer;
 }
 
 .comment-area .comment-list {
@@ -615,11 +627,19 @@ a:hover {
     user-select: none;
 }
 
-.comment-list .comment .content .description {
+.comment-list .comment .content .description div {
     font-size: 15px;
     font-weight: 400;
     margin-top: 4px;
     word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.comment-list .comment .content .description img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .more-comment {
@@ -926,6 +946,12 @@ a:hover {
 
     .post-bottom .react-btn {
         padding: 8px 22px;
+    }
+
+    .comment-list .comment .content .description img {
+        max-width: 260px;
+        max-height: 260px;
+        object-fit: cover;
     }
 }
 
