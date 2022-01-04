@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mkav Tea</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="nav">
+                <div class="nav-left">
+                    <a href="" class="logo">
+                        <img src="./logo.png" alt="">
+                    </a>
+                </div>
+                <div class="nav-center">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search" id="search-input">
+                    <div class="search-list">
+                        <a class="user-search" href="">
+                            <img src="./bang.jpg" alt="" class="image-34">
+                            <span>Anh Khoa</span>
+                        </a>
+                        <a class="user-search" href="">
+                            <img src="./bang.jpg" alt="" class="image-34">
+                            <span>Anh Khoa</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="user-group">
+                        <a href=""><img src="/img.jfif" alt=""></a>
+                        <div class="dropdown">
+                            <i class="fas fa-sort-down"></i>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <i class="fas fa-user-alt"></i>
+                                    Trang cá nhân
+                                </li>
+                                <li id="logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Đăng xuất
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main">
+            <div class="main-left">
+                <h3>Danh Mucj</h3>
+                <div class="main-left-item active">
+                    <i class="fas fa-user-alt"></i>
+                    Trang cá nhân
+                </div>
+                <div class="main-left-item">
+                    <i class="fas fa-user-alt"></i>
+                    Trang cá nhân
+
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="main-right-header">
+                    <span>Thong bao moi</span>
+                    <span><a href="">Xem tat ca</a></span>
+                </div>
+                <div class="main-right-list">
+                    <div class="notification">
+                        <div class="notification-detail">[Phong dai hoc] - 25/2/2022</div>
+                        <div class="notification-title">Hoc online lan dau</div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification-detail">[Phong dai hoc] - 25/2/2022</div>
+                        <div class="notification-title">Hoc online lan dau</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-center">
+                <div class="add-post">
+                    <div class="main-center-item">
+                        <img src="img.jfif" alt="">
+                        <input type="text" placeholder="ban dang nghi gi" id="add-post-input">
+                    </div>
+                </div>
+                <div class="post-list">
+                    <div class="main-center-item post">
+                        <div class="post-top">
+                            <img src="img.jfif" alt="" class="image-40">
+                            <div class="name-group">
+                                <div class="name">Khoa</div>
+                                <div class="time">22/12/2021 luc 13:02</div>
+                            </div>
+                            <div class="action">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="action-dropdown">
+                                    <div class="action-dropdown-item">
+                                        <i class="fas fa-edit"></i>
+                                        Sửa baif viet
+                                    </div>
+                                    <div class="action-dropdown-item">
+                                        <i class="fas fa-edit"></i>
+                                        Sửa baif viet
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="post-main">
+                            <div class="content">
+                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                    officia
+                                    alias perferendis eum. Nostrum odio aliquam eveniet nihil error provident animi
+                                    ipsam
+                                    doloribus neque eligendi itaque enim, consequuntur voluptatum modi?
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="like" id="like-list">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    120
+                                </div>
+                                <div class="comment">3 bình luận</div>
+                            </div>
+                        </div>
+                        <div class="post-bottom">
+                            <div class="like-btn react-btn">
+                                <i class="far fa-thumbs-up active"></i> Like
+                            </div>
+                            <div class="comment-btn react-btn">
+                                <i class="far fa-comment-alt"></i>Comment
+                            </div>
+                        </div>
+                        <div class="comment-area">
+                            <div class="comment-box">
+                                <img src="./img.jfif" alt="" class="image-34">
+                                <input type="text" placeholder="comment here">
+                            </div>
+                            <div class="comment-list">
+                                <div class="comment">
+                                    <img src="./bang.jpg" alt="" class="image-34">
+                                    <div class="content">
+                                        <div class="name">Bang</div>
+                                        <div class="description">Loremipsum dolor sit, amet consectetur adipisicing
+                                            elit. Dolorum impedit at inventore sunt minus adipisci? Fuga, sunt velit
+                                            labore, consectetur repellendus maiores vel suscipit, voluptatum ratione
+                                            tenetur impedit quae possimus.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="more-comment">
+                                Xem them comment
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-center-item post">
+                        <div class="post-top">
+                            <img src="img.jfif" alt="" class="image-40">
+                            <div class="name-group">
+                                <div class="name">Khoa</div>
+                                <div class="time">22/12/2021 luc 13:02</div>
+                            </div>
+                            <div class="action">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="action-dropdown">
+                                    <div class="action-dropdown-item">
+                                        <i class="fas fa-edit"></i>
+                                        Sửa baif viet
+                                    </div>
+                                    <div class="action-dropdown-item">
+                                        <i class="fas fa-edit"></i>
+                                        Sửa baif viet
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-main">
+                            <div class="content">
+                                <div>Lorem </div>
+                                <div class="post-image">
+                                    <img src="./messi.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="like"><i class="fas fa-thumbs-up"></i> 120</div>
+                                <div class="comment">3 bình luận</div>
+                            </div>
+                        </div>
+                        <div class="post-bottom">
+                            <div class="like-btn react-btn">
+                                <i class="far fa-thumbs-up"></i> Like
+                            </div>
+                            <div class="comment-btn react-btn">
+                                <i class="far fa-comment-alt"></i>Comment
+                            </div>
+                        </div>
+                        <div class="comment-area">
+                            <div class="comment-box">
+                                <img src="./img.jfif" alt="" class="image-34">
+                                <input type="text" placeholder="comment here">
+                            </div>
+                            <div class="comment-list">
+                                <div class="comment">
+                                    <img src="./bang.jpg" alt="" class="image-34">
+                                    <div class="content">
+                                        <div class="name">Bang</div>
+                                        <div class="description">Loremipsum dolor sit, amet consectetur adipisicing
+                                            elit. Dolorum impedit at inventore sunt minus adipisci? Fuga, sunt velit
+                                            labore, consectetur repellendus maiores vel suscipit, voluptatum ratione
+                                            tenetur impedit quae possimus.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="more-comment">
+                                Xem them comment
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-center-item post">
+                        <div class="post-top">
+                            <img src="img.jfif" alt="" class="image-40">
+                            <div class="name-group">
+                                <div class="name">Khoa</div>
+                                <div class="time">22/12/2021 luc 13:02</div>
+                            </div>
+                            <div class="action">
+                                <i class="fas fa-ellipsis-h"></i>
+                                <div class="action-dropdown">
+                                    <div class="action-dropdown-item">
+                                        <i class="fas fa-edit"></i>
+                                        Sửa baif viet
+                                    </div>
+                                    <div class="action-dropdown-item">
+                                        <i class="fas fa-edit"></i>
+                                        Sửa baif viet
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="post-main">
+                            <div class="content">
+                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                                    officia
+                                    alias perferendis eum. Nostrum odio aliquam eveniet nihil error provident animi
+                                    ipsam
+                                    doloribus neque eligendi itaque enim, consequuntur voluptatum modi?
+                                </div>
+                                <iframe width="100%" height="315" src="//www.youtube.com/embed/g57f2LGRPaA"
+                                    frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="info">
+                                <div class="like"><i class="fas fa-thumbs-up"></i> 120</div>
+                                <div class="comment">3 bình luận</div>
+                            </div>
+                        </div>
+                        <div class="post-bottom">
+                            <div class="like-btn react-btn">
+                                <i class="far fa-thumbs-up active"></i> Like
+                            </div>
+                            <div class="comment-btn react-btn">
+                                <i class="far fa-comment-alt"></i>Comment
+                            </div>
+                        </div>
+                        <div class="comment-area">
+                            <div class="comment-box">
+                                <img src="./img.jfif" alt="" class="image-34">
+                                <input type="text" placeholder="comment here">
+                            </div>
+                            <div class="comment-list">
+                                <div class="comment">
+                                    <img src="./bang.jpg" alt="" class="image-34">
+                                    <div class="content">
+                                        <div class="name">Bang</div>
+                                        <div class="description">Loremipsum dolor sit, amet consectetur adipisicing
+                                            elit. Dolorum impedit at inventore sunt minus adipisci? Fuga, sunt velit
+                                            labore, consectetur repellendus maiores vel suscipit, voluptatum ratione
+                                            tenetur impedit quae possimus.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="more-comment">
+                                Xem them comment
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./img.jfif" alt="" class="image-40">
+                        <b>Khoa</b>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST" enctype="multipart/form-data" id="add-form">
+                            <div class="form-group">
+                                <textarea class="form-control" id="description" rows="4" name="description"
+                                    placeholder="Bạn đang nghĩ gì vậy"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="image">Up ảnh</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                    <label class="custom-file-label" for="image">Chọn ảnh...</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="video">Video</label>
+                                <input type="text" class="form-control" id="video" name="video"
+                                    placeholder="Link video youtube">
+                            </div>
+                            <div class="alert alert-danger" id="error-add-post" role="alert">
+                                Error Message
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <button type="submit" class="btn btn-success">Lưu</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="like-list-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Những người thích</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="like-list">
+                            <a href="">
+                                <img src="./img.jfif" class="image-34" alt="">
+                                <span>Anh Khoa</span>
+                            </a href="">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="main.js"></script>
+
+</html>
