@@ -1,6 +1,9 @@
 :root {
-    --bg-color: #f6f6f6;
-    --text-color: #333;
+    --bg-color: #F8FBFA;
+    --secondary-color: #b1bbc8;
+    --text-color: #1d3a5f;
+    --blue-active: #1877f2;
+    --content-color: #566b87;
     --border-color: rgb(245, 245, 245);
 }
 
@@ -9,6 +12,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
 }
 
 a {
@@ -118,7 +122,7 @@ a:hover {
     position: absolute;
     top: translateY(50%);
     left: 11px;
-    color: rgb(209, 209, 209);
+    color: var(--secondary-color);
     font-size: 15px;
 }
 
@@ -190,7 +194,7 @@ a:hover {
 }
 
 .dropdown.active {
-    background-color: rgb(238, 235, 235);
+    background-color: var(--bg-color);
 }
 
 .dropdown.active .dropdown-menu {
@@ -225,7 +229,7 @@ a:hover {
 }
 
 .dropdown .dropdown-menu li:hover {
-    background-color: #F6F6F6;
+    background-color: var(--bg-color);
 }
 
 .dropdown .dropdown-menu li a {
@@ -287,7 +291,8 @@ a:hover {
 }
 
 .main-left .main-left-item.active {
-    border-left: 2px solid #AC773C;
+    border-left: 3px solid var(--text-color);
+    background-color: var(--bg-color);
 }
 
 .main-left .main-left-item i {
@@ -326,7 +331,7 @@ a:hover {
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    color: #333;
+    color: var(--text-color);
 }
 
 .main-right .main-right-list {
@@ -389,7 +394,7 @@ a:hover {
     padding: 8px 18px;
     outline: none;
     border-radius: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     font-size: 16px;
 }
 
@@ -423,7 +428,7 @@ a:hover {
 .post .post-top .time {
     font-size: 13px;
     font-weight: 500;
-    color: rgb(80, 79, 79);
+    color: var(--secondary-color);
 }
 
 .post .post-top .action {
@@ -436,7 +441,7 @@ a:hover {
 }
 
 .action.active {
-    background-color: rgb(238, 235, 235);
+    background-color: var(--bg-color);
 }
 
 .post .post-top .action .action-dropdown {
@@ -464,13 +469,13 @@ a:hover {
 }
 
 .action-dropdown-item:hover {
-    background-color: #F6F6F6;
+    background-color: var(--bg-color);
 }
 
 .post .post-top .action i {
     font-size: 15px;
     margin-right: 4px;
-    color: #333;
+    color: var(--text-color);
     position: relative;
     right: -2px;
 }
@@ -509,11 +514,11 @@ a:hover {
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
-    color: rgb(119, 119, 119);
+    color: var(--text-color);
 }
 
 .post .post-main .info .like i {
-    color: #1b82cc;
+    color: var(--blue-active);
 }
 
 .post .post-bottom {
@@ -526,7 +531,7 @@ a:hover {
     cursor: pointer;
     padding: 8px 36px;
     border-radius: 10px;
-    color: rgb(80, 79, 79);
+    color: var(--text-color);
     font-size: 15px;
     font-weight: 500;
     display: flex;
@@ -541,7 +546,7 @@ a:hover {
 }
 
 .react-btn .fa-thumbs-up.active {
-    color: #1b82cc;
+    color: var(--blue-active);
 }
 
 .post-bottom .react-btn:hover {
@@ -582,7 +587,7 @@ a:hover {
     padding: 6px 16px;
     outline: none;
     border-radius: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     font-size: 15px;
 }
 
@@ -625,6 +630,7 @@ a:hover {
     font-weight: 500;
     font-size: 13px;
     user-select: none;
+    color: var(--secondary-color);
 }
 
 .comment-list .comment .content .description div {
@@ -691,7 +697,7 @@ a:hover {
 }
 
 .like-list i {
-    color: #1b82cc;
+    color: var(--blue-active);
 }
 
 .modal-body {
@@ -769,7 +775,7 @@ a:hover {
 
 .profile-content .avatar label i {
     font-size: 16px;
-    color: #AC773C;
+    color: var(--text-color);
 }
 
 .profile-form {
