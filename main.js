@@ -62,3 +62,14 @@ $("#like-list").click(function () {
         $(".search-list").css("display", "none")
     })
 }
+
+{      
+    $("input[name=media-checked]").change(() => displayMedia())
+
+    function displayMedia() {
+        const mediaChecked = $("input[name=media-checked]:checked").val()
+        const mediaUnChecked = $("input[name=media-checked]:not(:checked)").val()
+        $(`.${mediaChecked}`).css("display", "block")
+        $(`.${mediaUnChecked}`).css("display", "none")
+    }
+}

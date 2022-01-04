@@ -49,6 +49,7 @@ a:hover {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 12px;
+    user-select: none;
 }
 
 .image-34 {
@@ -57,6 +58,7 @@ a:hover {
     object-fit: cover;
     border-radius: 50%;
     margin-right: 10px;
+    user-select: none;
 }
 
 .header {
@@ -88,6 +90,7 @@ a:hover {
     width: 50px;
     height: 50px;
     object-fit: cover;
+    user-select: none;
 }
 
 .nav-center {
@@ -171,6 +174,7 @@ a:hover {
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
+    user-select: none;
 }
 
 .user-group .dropdown {
@@ -646,4 +650,14 @@ a:hover {
 .modal-body {
     max-height: 65vh;
     overflow-y: auto;
+    user-select: none;
+}
+
+.media-label {
+    display: block;
+    width: 100%;
+}
+
+.media-image, .media-video {
+    display: none;
 }
