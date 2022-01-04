@@ -38,9 +38,13 @@
                                 Trang Cá Nhân
                             </div>
                             <div class="nav-ipad-item">
+                                <i class="fas fa-bell"></i>
+                                Thông Báo
+                            </div>
+                            <div class="nav-ipad-item">
                                 <i class="fas fa-sign-out-alt"></i>
                                 Đăng Xuất
-                            
+
                             </div>
                         </div>
                         <div class="nav-ipad-overlay"></div>
@@ -86,11 +90,11 @@
         <section class="main">
             <div class="main-left">
                 <h3>Danh Mục</h3>
-                <div class="main-left-item active">
+                <div class="main-left-item">
                     <i class="fas fa-home"></i>
                     Trang Chủ
                 </div>
-                <div class="main-left-item">
+                <div class="main-left-item active">
                     <i class="fas fa-user-alt"></i>
                     Trang Cá Nhân
                 </div>
@@ -136,11 +140,30 @@
                 </div>
             </div>
             <div class="main-center">
-                <div class="add-post">
-                    <div class="main-center-item">
-                        <img src="img.jfif" alt="" class="image-40">
-                        <input type="text" placeholder="Bạn đang nghĩ gì vậy Khoa ?" id="add-post-input">
+                <div class="profile main-center-item">
+                    <div class="bg-top">
                     </div>
+                    <div class="profile-content">
+                        <div class="avatar">
+                            <img src="img.jfif" alt="">
+                            <form id="image-form" action="" enctype="multipart/form-data" method="POST">
+                                <label for="user-image"><i class="fas fa-camera"></i></label>
+                                <input type="file" name="image" id="user-image" accept="image/png, image/jpeg">
+                            </form>
+                        </div>
+                        <div class="profile-form">
+                            <div class="profile-form-info">
+                                <i class="fas fa-graduation-cap"></i>
+                                Khoa CNTT
+                            </div>
+                            <div class="profile-form-info">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                Lớp 19050202
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-info" id="save-profile-btn" data-toggle="modal"
+                        data-target="#edit-profile-modal">Chỉnh sửa thông tin</button>
                 </div>
                 <div class="post-list">
                     <div class="main-center-item post">
@@ -198,10 +221,7 @@
                                 <div class="comment">
                                     <img src="./bang.jpg" alt="" class="image-34">
                                     <div class="content">
-                                        <div class="name">
-                                            <span>Bang</span>
-                                            <span>22/12/2021</span>
-                                        </div>
+                                        <div class="name">Bang</div>
                                         <div class="description">Loremipsum dolor sit, amet consectetur adipisicing
                                             elit. Dolorum impedit at inventore sunt minus adipisci? Fuga, sunt velit
                                             labore, consectetur repellendus maiores vel suscipit, voluptatum ratione
@@ -265,8 +285,7 @@
                                 <div class="comment">
                                     <img src="./bang.jpg" alt="" class="image-34">
                                     <div class="content">
-                                        <div class="name"><span>Bang</span>
-                                        <span>22/12/2021</span></div>
+                                        <div class="name">Bang</div>
                                         <div class="description">Loremipsum dolor sit, amet consectetur adipisicing
                                             elit. Dolorum impedit at inventore sunt minus adipisci? Fuga, sunt velit
                                             labore, consectetur repellendus maiores vel suscipit, voluptatum ratione
@@ -283,8 +302,7 @@
                         <div class="post-top">
                             <img src="img.jfif" alt="" class="image-40">
                             <div class="name-group">
-                                <div class="name"><span>Bang</span>
-                                <span>22/12/2021</span></div>
+                                <div class="name">Khoa</div>
                                 <div class="time">22/12/2021 luc 13:02</div>
                             </div>
                             <div class="action">
@@ -334,10 +352,7 @@
                                 <div class="comment">
                                     <img src="./bang.jpg" alt="" class="image-34">
                                     <div class="content">
-                                        <div class="name">
-                                            <span>Bang</span>
-                                            <span>22/12/2021</span>
-                                        </div>
+                                        <div class="name">Bang</div>
                                         <div class="description">Loremipsum dolor sit, amet consectetur adipisicing
                                             elit. Dolorum impedit at inventore sunt minus adipisci? Fuga, sunt velit
                                             labore, consectetur repellendus maiores vel suscipit, voluptatum ratione
@@ -354,7 +369,8 @@
                 </div>
             </div>
         </section>
-        <div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <div class="modal fade" id="edit-profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -362,39 +378,16 @@
                         <b>Khoa</b>
                     </div>
                     <div class="modal-body">
-                        <form action="" method="POST" enctype="multipart/form-data" id="add-form">
+                        <form action="" method="POST" enctype="multipart/form-data" id="edit-profile-form">
                             <div class="form-group">
-                                <textarea class="form-control" id="description" rows="4" name="description"
-                                    placeholder="Bạn đang nghĩ gì vậy"></textarea>
+                                <label for="faculty">Khoa của bạn</label>
+                                <input type="text" class="form-control" id="faculty" name="faculty" placeholder="Khoa...">
                             </div>
                             <div class="form-group">
-                                <label for="image-checked" class="media-label">Đăng ảnh hoặc video </label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="media-checked" value="media-image" id="image-checked">
-                                    <label class="form-check-label" for="image-checked">
-                                        Ảnh
-                                    </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="media-checked" value="media-video" id="video-checked">
-                                    <label class="form-check-label" for="video-checked">
-                                        Video
-                                    </label>
-                                </div>
+                                <label for="class">Lớp của bạn</label>
+                                <input type="text" class="form-control" id="class" name="class" placeholder="Lớp...">
                             </div>
-                            <div class="form-group media-image">
-                                <label for="image">Up ảnh</label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="image" name="image">
-                                    <label class="custom-file-label" for="image">Chọn ảnh...</label>
-                                </div>
-                            </div>
-                            <div class="form-group media-video">
-                                <label for="video">Video youtube</label>
-                                <input type="text" class="form-control" id="video" name="video"
-                                    placeholder="Link video youtube">
-                            </div>
-                            <div class="alert alert-danger" id="error-add-post" role="alert">
+                            <div class="alert alert-danger" id="error-edit-profile" role="alert">
                                 Error Message
                             </div>
                             <div class="text-right">
