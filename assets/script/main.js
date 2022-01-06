@@ -63,7 +63,7 @@ $("#like-list").click(function () {
     })
 }
 
-{      
+{
     $("input[name=media-checked]").change(() => displayMedia())
 
     function displayMedia() {
@@ -87,5 +87,43 @@ $("#like-list").click(function () {
         $(".nav-ipad-container").css("opacity", "0")
         $(".nav-ipad-overlay").css("display", "none")
         $(".nav-ipad-overlay").css("opacity", "0")
+    })
+}
+
+
+// Noti dropdown
+{
+    $(".notification-dropdown").click(function (e) {
+        const children = e.target.children.length === 0 ? e.target : e.target.children[0]
+
+        if (children.classList.toString().includes("fa-chevron-up")) {
+            children.classList.remove("fa-chevron-up")
+            children.classList.add("fa-chevron-down")
+            $(".notification-dropdown-menu").css("display", "block")
+            $(".notification-dropdown-menu").css("transform", "translateY(0px)")
+        } else if (children.classList.toString().includes("fa-chevron-down")) {
+            children.classList.remove("fa-chevron-down")
+            children.classList.add("fa-chevron-up")
+            $(".notification-dropdown-menu").css("display", "none")
+            $(".notification-dropdown-menu").css("transform", "translateY(-100%)")
+        }
+    })
+}
+
+// Click xoa nguoi dung
+{
+    $(".delete-user").click(e => {
+        swal({
+            title: "DELETE",
+            text: `Xóa nhân viên này ?`,
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    // deleteEmployee(e)
+                }
+            })
     })
 }

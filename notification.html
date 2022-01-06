@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mkav Tea</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/style/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="nav">
+                <div class="nav-left">
+                    <div class="nav-ipad">
+                        <i class="fas fa-bars" id="navbar-icon"></i>
+                        <div class="nav-ipad-container">
+                            <div class="nav-ipad-user">
+                                <img src="./assets/image/img.jfif" alt="">
+                            </div>
+                            <div class="nav-ipad-item">
+                                <i class="fas fa-home"></i>
+                                Trang Chủ
+                            </div>
+                            <div class="nav-ipad-item">
+                                <i class="fas fa-user-alt"></i>
+                                Trang Cá Nhân
+                            </div>
+                            <div class="nav-ipad-item">
+                                <i class="fas fa-sign-out-alt"></i>
+                                Đăng Xuất
+
+                            </div>
+                        </div>
+                        <div class="nav-ipad-overlay"></div>
+                    </div>
+                    <a href="" class="logo">
+                        <img src="./assets/image/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="nav-center">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm người dùng..." id="search-input">
+                    <div class="search-list">
+                        <a class="user-search" href="">
+                            <img src="./assets/image/bang.jpg" alt="" class="image-34">
+                            <span>Anh Khoa</span>
+                        </a>
+                        <a class="user-search" href="">
+                            <img src="./assets/image/bang.jpg" alt="" class="image-34">
+                            <span>Anh Khoa</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="user-group">
+                        <a href=""><img src="./assets/image/img.jfif" alt=""></a>
+                        <div class="dropdown">
+                            <i class="fas fa-sort-down"></i>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <i class="fas fa-user-alt"></i>
+                                    Trang cá nhân
+                                </li>
+                                <li id="logout">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Đăng xuất
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="main">
+            <div class="main-left">
+                <h3>Danh Mục</h3>
+                <div class="main-left-item">
+                    <i class="fas fa-home"></i>
+                    Trang Chủ
+                </div>
+                <div class="main-left-item">
+                    <i class="fas fa-user-alt"></i>
+                    Trang Cá Nhân
+                </div>
+                <div class="main-left-item active">
+                    <i class="fas fa-bell"></i>
+                    Thông Báo
+                </div>
+            </div>
+            <div class="main-center main-notification-center">
+                <div class="main-center-item notification-action">
+                    <form>
+                        <div class="form-group">
+                            <label for="notification-name">Tìm kiếm thông báo</label>
+                            <input type="text" class="form-control" id="notification-name" name="notification-name"
+                                placeholder="Tên thông báo...">
+                        </div>
+                        <div class="form-group">
+                            <label for="faculty">Khoa/Phòng</label>
+                            <select class="form-control" id="faculty" name="faculty">
+                                <option value="all">Tất cả</option>
+                                <option value="phong-dai-hoc">Phòng Đại Học</option>
+                                <option value="khoa-cntt">Khoa CNTT</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-info">Tìm kiếm</button>
+                    </form>
+                </div>
+                <div class="main-center-item notification-list">
+                    <div class="notification-item">
+                        <a href="">
+                            <div class="title" title="Title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eius aut
+                                blanditiis debitis fugiat ullam impedit recusandae. Facere est ipsam, similique saepe
+                                sequi
+                                natus perspiciatis excepturi omnis, dolor voluptas sed!
+                            </div>
+                            <div class="new-tag">New</div>
+                            <div class="time">[Phòng Tài chính] - 25/12/2021</div>
+                        </a>
+                    </div>
+                    <div class="notification-item">
+                        <a href="">
+                            <div class="title" title="Title">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eius aut
+                                blanditiis debitis fugiat ullam impedit recusandae. Facere est ipsam, similique saepe
+                                sequi
+                                natus perspiciatis excepturi omnis, dolor voluptas sed!
+                            </div>
+                            <div class="new-tag">New</div>
+                            <div class="time">[Phòng Tài chính] - 25/12/2021</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="main-center-item notification-pagination">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img src="./assets/image/img.jfif" alt="" class="image-40">
+                        <b>Khoa</b>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST" enctype="multipart/form-data" id="add-form">
+                            <div class="form-group">
+                                <textarea class="form-control" id="description" rows="4" name="description"
+                                    placeholder="Bạn đang nghĩ gì vậy"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="image-checked" class="media-label">Đăng ảnh hoặc video </label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="media-checked"
+                                        value="media-image" id="image-checked">
+                                    <label class="form-check-label" for="image-checked">
+                                        Ảnh
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="media-checked"
+                                        value="media-video" id="video-checked">
+                                    <label class="form-check-label" for="video-checked">
+                                        Video
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group media-image">
+                                <label for="image">Up ảnh</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="image" name="image">
+                                    <label class="custom-file-label" for="image">Chọn ảnh...</label>
+                                </div>
+                            </div>
+                            <div class="form-group media-video">
+                                <label for="video">Video youtube</label>
+                                <input type="text" class="form-control" id="video" name="video"
+                                    placeholder="Link video youtube">
+                            </div>
+                            <div class="alert alert-danger" id="error-add-post" role="alert">
+                                Error Message
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <button type="submit" class="btn btn-success">Lưu</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="./assets/script/main.js"></script>
+
+</html>
