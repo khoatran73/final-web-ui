@@ -127,3 +127,86 @@ $("#like-list").click(function () {
             })
     })
 }
+
+// editor
+const editor = new EditorJS({
+    holder: 'editorjs',
+    tools: {
+        header: {
+            class: Header,
+            inlineToolbar: ['link']
+        },
+        list: {
+            class: List,
+            inlineToolbar: true
+        }
+    },
+})
+
+const editorjs = document.querySelector("#editorjs")
+editorjs.addEventListener("keyup", function () {
+    editor.save().then((data) => {
+        showResult(data)
+    }).catch((error) => {
+        console.log('Saving failed: ', error)
+    })
+})
+
+function showResult(data) {
+    const result = document.querySelector("#result")
+    result.innerHTML = ""
+
+    const blocks = data.blocks
+
+    blocks.forEach((block) => {
+        if (block.type === "header") {
+            const header = document.createElement(`h${block.data.level}`)
+            header.classList.add("ce-header")
+            header.innerHTML = block.data.text
+            result.appendChild(header)
+        } else if (block.type === "paragraph") {
+            const p = document.createElement("p")
+            p.classList.add("ce-paragraph")
+            p.classList.add("cdx-block")
+            p.innerHTML = block.data.text
+            result.appendChild(p)
+        } else if (block.type === "list") {
+            if (block.data.style === "ordered") {
+                const ol = document.createElement("ol")
+                ol.classList.add("cdx-block")
+                ol.classList.add("cdx-list")
+                ol.classList.add("cdx-list--ordered")
+                block.data.items.forEach((item) => {
+                    const li = document.createElement("li")
+                    li.classList.add("cdx-list__item")
+                    li.innerHTML = item
+                    ol.appendChild(li)
+                })
+                result.appendChild(ol)
+            } else {
+                const ul = document.createElement("ul")
+                ul.classList.add("cdx-block")
+                ul.classList.add("cdx-list")
+                ul.classList.add("cdx-list--unordered")
+                block.data.items.forEach((item) => {
+                    const li = document.createElement("li")
+                    li.classList.add("cdx-list__item")
+                    li.innerHTML = item
+                    ul.appendChild(li)
+                })
+                result.appendChild(ul)
+            }
+        } else if (!block.type) {
+            result.appendChild(document.createElement("br"))
+        }
+    })
+}
+
+$("#save-notify-btn").click(function () {
+    editor.save().then((data) => {
+        const notify = JSON.stringify({
+            title: $("#title").val(),
+            content: data.blocks
+        })
+    })
+}) 
